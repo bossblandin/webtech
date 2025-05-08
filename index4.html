@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computer Store and Services Webpages Design </title>
+
+    <link rel="stylesheet" type="text/css" href="CSS\styless1.css">
+
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="imgs\logoo.png">
+        </a>
+        
+        <ul class="navbar">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="#about-us" class="active4">About Us</a></li>
+            <li><a href="index.html#menu">Items</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>  
+        </ul>
+
+        <div class="header-icons">
+            <a href="#"><i class='bx bxs-search' ></i></a>
+            <a href="#"><i class='bx bx-bell'></i></a>
+            <a href="#"><i class='bx bx-cart' ></i></a>
+             <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header> 
+
+    <section class="about-us" id="about-us">
+        <div class="services">
+             <h2>ABOUT US</h2>
+         </div>
+    <div class="container1">
+        <img src="imgs\logoo.png" alt="Profile Picture" class="profile-pic1">
+        <h1 class="name">BLANDTECH</h1>
+        <div class="section">
+            <h2>Business Information</h2>
+            <ul>
+                <li><span>Business Name:</span>BLANDTECH</li>
+                <li><span>Address:</span>3rd Floor, Festival Mall, Alabang Muntinlupa City</li>
+                <li><span>Website Email:</span>blandtech@gmail.com</li>
+                <li><span>Contact:</span>09918244116</li>
+                <li><span>Business Owner: </span>Blandin Nap N. Armea</li>
+            </ul>
+        </div>
+</div>
+</section>
+
+    <section>
+	<div class="container1">
+		<img id="img" src="imgs\owner.jpg" alt="Profile Picture" class="profile-pic">
+		<h1 class="name">Blandin Nap N. Armea</h1>
+		<div class="section">
+			<h2>Owner Personal Information</h2>
+			<ul>
+				<li><span>Name:</span>Blandin Nap N. Armea</li>
+				<li><span>Email:</span>armeablandinnap@gmail.com</li>
+				<li><span>Phone:</span>09918244116</li>
+				<li><span>Address:</span>Poblacion, Muntinlupa City</li>
+			</ul>
+		</div>
+		<div class="section">
+			<h2>Current Education</h2>
+			<ul>
+				<li><span>Degree:</span>Bachelor of Science in Information Technology</li>
+				<li><span>School:</span>Pamantasan ng Lungsod ng Muntinlupa</li>
+			</ul>
+		</div> 
+</div>
+</section>
+<section>
+    <div class="container1">
+        <h1 id="name" class="name">Our Mission</h1>
+    <div class="section">
+        <p class="mission-vision">Our mission is to provide high-quality technology solutions and services to our customers, while building long-term relationships based on trust, honesty, and exceptional customer service. We believe in offering personalized solutions that meet the unique needs of each customer, and we are committed to staying up-to-date with the latest technology trends and developments. We place a strong emphasis on sustainability and environmental responsibility, and we strive to minimize our impact on the environment whenever possible. Our goal is to be the leading provider of technology solutions and services in our community, and to make a positive impact on the lives of our customers and the world around us.</p>
+    </div>
+    <button class="myButton" id="myButton" onclick="changetomission()">See Vision</button>
+</div>
+</section>
+            <div class="copyright">
+                <p>Created by Blandin Nap N. Armea <br> copyright infringement will be punished by the law<a href="index.html#home"><i class='bx bxs-home-alt-2'></i></a></p>
+            </div> 
+
+
+<script>
+function changetomission() {
+
+  var heading = document.getElementById("name");
+  var mission = document.getElementsByClassName("mission-vision")[0];
+  var button = document.getElementById("myButton");
+
+if (heading.textContent === "Our Mission")
+{
+  heading.textContent = "Our Vision";
+  mission.textContent = "Blandtech computer store and services business is thriving as technology continues to play an increasingly important role in people's lives. The store offers a wide variety of high-quality computer products and accessories, including desktops, laptops, monitors, printers, and more. Customers can also rely on a range of services, such as software installation, virus removal, data recovery, and hardware repairs. The store's knowledgeable and friendly staff is committed to providing exceptional customer service, making sure that each customer is fully satisfied with their purchase or service. The store also offers online shopping options and home delivery services, ensuring that customers can easily access the products and services they need.";
+  button.textContent = "See Mission"
+}   
+else {
+    heading.textContent = "Our Mission";
+    mission.textContent = "Blandtech computer provide high-quality technology solutions and services to our customers, while building long-term relationships based on trust, honesty, and exceptional customer service. We believe in offering personalized solutions that meet the unique needs of each customer, and we are committed to staying up-to-date with the latest technology trends and developments. We place a strong emphasis on sustainability and environmental responsibility, and we strive to minimize our impact on the environment whenever possible. Our goal is to be the leading provider of technology solutions and services in our community, and to make a positive impact on the lives of our customers and the world around us.";
+    button.textContent = "See Vision"
+}
+}
+
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

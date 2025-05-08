@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computer Store and Services Webpages Design </title>
+
+    <link rel="stylesheet" type="text/css" href="CSS\styless1.css">
+
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="imgs\logoo.png">
+        </a>
+        
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="index2.html">Computers</a></li>
+            <li><a href="index3.html">Parts</a></li>
+            <li><a href="#services" class="active">Services</a></li>  
+        </ul>
+
+        <div class="header-icons">
+            <a href="#"><i class='bx bxs-search' ></i></a>
+            <a href="#"><i class='bx bx-bell'></i></a>
+            <a href="#"><i class='bx bx-cart' ></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+<section class="services" id="services">
+         <div class="services">
+             <strong>Our Shop Offers</strong>
+             <h2>COMPUTER SERVICES</h2>
+             <p>Our shop offers variety of services together with our trusted employees. We can provide you a fast and efficient services.</p>
+         </div> 
+<br>
+        <div class="repair-container">
+         <div class="repair">
+            <h3 id="h3"> COMPUTER REPAIR </h3>
+            <p id="p"> Your reliable source for expert computer repair services is here. At BLANDTECH, we provide fast and effective solutions for hardware and software issues to keep your technology running smoothly. It include hardware and software repairs.</p>
+        </div>
+
+        <div class="repair1">
+            <div class="repair2">
+                <img src="imgs/repair1.jpg">
+            </div>
+
+            <div class="repair2">
+                <img src="imgs/repair2.jpg">
+            </div>
+
+            <div class="repair2">
+                <img src="imgs/repair3.jpg">
+            </div>
+        </div>
+        <button class="myButton" id="mybutton">Next</button>
+    </div>
+</section>
+
+ <div class="copyright">
+                <p>Note: All offered services are not buyable online. Please contact us to make an appointment.<br>Created by BLANDTECH<br> copyright infringement will be punished by the law<a href="index.html#home"><i class='bx bxs-home-alt-2'></i></a></p>
+            </div> 
+
+<script>
+
+const header = document.getElementById('h3');
+const paragraph = document.getElementById('p');
+const images = document.querySelectorAll('.repair2 img');
+const button = document.querySelector('#mybutton');
+
+const headers = ["CUSTOM-BUILD and UPGRADES", "NETWORKING SERVICES","SOFTWARE INSTALLATION and DATA RECOVERY", "COMPUTER REPAIR"];
+const paragraphs = [
+    "We specialize in providing customized computer solutions for individuals and businesses, from building custom PCs to upgrading existing systems. Our mission is to optimize your computing experience for maximum efficiency and enjoyment.",
+    "We provide comprehensive networking services for individuals and businesses, specializing in network setup, security, and troubleshooting. Our goal is to optimize your network performance and enhance your online experience.",
+    "We provide reliable software installation and data backup and recovery services for individuals and businesses. Our focus is on keeping your data safe and accessible while simplifying software installation processes. Let us take care of your data needs.",
+    "Your reliable source for expert computer repair services is here. At BLANDTECH, we provide fast and effective solutions for hardware and software issues to keep your technology running smoothly. It include hardware and software repairs.",
+];
+
+const imageSources = [
+    ["imgs/built1.jpg", "imgs/built2.jpg", "imgs/built3.jpg"],
+    ["imgs/network1.jpg", "imgs/network2.webp", "imgs/network3.jpg"],
+    ["imgs/install1.jpeg", "imgs/install2.jpg", "imgs/install3.jpg"],
+    ["imgs/repair1.jpg", "imgs/repair2.jpg", "imgs/repair3.jpg"]
+];
+
+let index = 0;
+
+button.addEventListener('click', () => {
+    header.textContent = headers[index];
+    paragraph.textContent = paragraphs[index];
+    for (let i = 0; i < images.length; i++) {
+        images[i].src = imageSources[index][i];
+    }
+    index = (index + 1) % headers.length;
+});
+
+</script>
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+
+
+</body>
+</html>
